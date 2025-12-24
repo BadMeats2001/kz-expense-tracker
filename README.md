@@ -37,3 +37,5 @@ cd kz-expense-tracker
 ## Screenshots
 
 _Add 1–2 screenshots of the main dashboard view here later._
+
+![Dashboard](screenshots/screenshot-dashboard.png)

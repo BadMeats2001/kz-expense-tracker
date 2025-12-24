@@ -198,6 +198,11 @@ tbody tr:nth-child(even) {
   background: #f9fafb;
 }
 
+tbody tr:hover {
+  background: #eef2ff;
+}
+
+
 /* Charts placeholder */
 .charts {
   margin-top: 24px;

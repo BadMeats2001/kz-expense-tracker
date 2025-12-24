@@ -149,6 +149,12 @@ function updateSummary() {
     }
   });
 
+  const periodLabel = document.getElementById('period-label');
+if (periodLabel) {
+  periodLabel.textContent =
+    selectedPeriod === 'this_month' ? 'This month' : 'All time';
+}
+
   const balance = totalIncome - totalExpenses;
 
   balanceEl.textContent = balance.toLocaleString('en-US') + ' KZT';
