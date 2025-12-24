@@ -30,6 +30,8 @@ Personal finance dashboard for Kazakhstan. Track income and expenses in KZT with
 
 ```
 git clone https://github.com/BadMeats2001/kz-expense-tracker.git
+```
+```
 cd kz-expense-tracker
 ```
 
