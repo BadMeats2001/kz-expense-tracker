@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kazakhstan Expense Tracker (KZT)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Kazakhstan Expense Tracker</h1>
+    <p>Personal finance dashboard for Kazakhstan (currency: KZT)</p>
+  </header>
+
+  <main class="app-main">
+    <!-- Period filter -->
+    <section class="period-filter">
+      <label for="period">Period:</label>
+      <select id="period">
+        <option value="this_month">This month</option>
+        <option value="all_time">All time</option>
+      </select>
+    </section>
+
+    <!-- Summary cards -->
+    <section class="summary">
+      <div class="card">
+        <h2>Balance</h2>
+        <p id="balance">0 KZT</p>
+      </div>
+      <div class="card">
+        <h2>Total Income</h2>
+        <p id="total-income">0 KZT</p>
+      </div>
+      <div class="card">
+        <h2>Total Expenses</h2>
+        <p id="total-expenses">0 KZT</p>
+      </div>
+    </section>
+
+    <!-- Add transaction form -->
+    <section class="add-transaction">
+      <h2>Add transaction</h2>
+      <form id="transaction-form">
+        <div class="form-row">
+          <label for="type">Type</label>
+          <select id="type" required>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="amount">Amount (KZT)</label>
+          <input type="number" id="amount" min="1" required />
+        </div>
+
+        <div class="form-row">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <!-- Income categories -->
+            <option value="salary">Salary</option>
+            <option value="freelance">Freelance / Side job</option>
+            <option value="business_income">Business income</option>
+            <option value="gifts">Gifts / Transfers</option>
+
+            <!-- Expense categories -->
+            <option value="kaspi_qr">Kaspi QR & in-store purchases</option>
+            <option value="kaspi_installment">Kaspi installment</option>
+            <option value="groceries">Groceries & supermarkets</option>
+            <option value="restaurants">Restaurants & cafes</option>
+            <option value="utilities">Utilities (electricity, water, gas)</option>
+            <option value="internet_mobile">Internet & mobile operators</option>
+            <option value="transport_taxi">Public transport & taxis</option>
+            <option value="rent_housing">Rent & housing</option>
+            <option value="education">Education & courses</option>
+            <option value="health">Health & pharmacies</option>
+            <option value="entertainment">Entertainment & subscriptions</option>
+            <option value="other">Other</option>
+          </select>
+
+        </div>
+
+        <div class="form-row">
+          <label for="date">Date</label>
+          <input type="date" id="date" required />
+        </div>
+
+        <div class="form-row">
+          <label for="note">Note</label>
+          <input
+            type="text"
+            id="note"
+            placeholder="e.g. Kaspi Mart groceries, Yandex Go ride, Beeline top-up"
+          />
+        </div>
+
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <!-- Transactions list -->
+    <section class="transactions">
+      <h2>Transactions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Note</th>
+            <th>Amount (KZT)</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="transactions-body">
+          <!-- rows will be added here by JavaScript -->
+        </tbody>
+      </table>
+    </section>
+
+        <!-- Charts -->
+    <section class="charts">
+      <h2>Spending by category</h2>
+      <div style="max-width: 500px; margin: 0 auto;">
+        <canvas id="expenses-chart"></canvas>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
