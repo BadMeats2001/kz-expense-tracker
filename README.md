@@ -28,14 +28,21 @@ Personal finance dashboard for Kazakhstan. Track income and expenses in KZT with
 
 1. Clone the repository:
 
+```
 git clone https://github.com/BadMeats2001/kz-expense-tracker.git
 cd kz-expense-tracker
+```
 
 2. Open `index.html` in a modern browser (Chrome, Edge, Firefox).  
 3. Start adding transactions and explore the dashboard.
 
 ## Screenshots
 
-_Add 1–2 screenshots of the main dashboard view here later._
-
 ![Dashboard](screenshots/screenshot-dashboard.png)
+
+## Possible future improvements
+
+- Multi-currency support (KZT + USD/EUR with live rates)
+- Export transactions to CSV
+- Simple authentication and cloud sync
+- Mobile-friendly navigation for PWA / mobile apps
